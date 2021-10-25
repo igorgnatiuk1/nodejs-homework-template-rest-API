@@ -1,4 +1,4 @@
-const contactsOperations = require('../../model/contacts/contactsOperations')
+const contactsOperations = require('../model/contactsOperations')
 
 const listContacts = async (req, res, next) => {
   const contacts = await contactsOperations.listContacts()
@@ -79,5 +79,4 @@ module.exports = {
   add,
   updateById,
   removeById
-
 }

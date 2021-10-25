@@ -1,5 +1,4 @@
-const contacts = require('./contacts/contacts')
-
+const contacts = require('./contacts')
 module.exports = {
   contacts
 }
