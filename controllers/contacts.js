@@ -16,7 +16,7 @@ const getById = async (req, res, next) => {
     res.status(404).json({
       status: 'error',
       code: 404,
-      message: `Contact with id ${contactId} not found`
+      message: `Contact wih id ${contactId} not found`
     })
     return
   }
