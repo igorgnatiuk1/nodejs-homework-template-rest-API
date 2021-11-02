@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
-require('dotenv').config()
+
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const app = require('../app')
 
@@ -13,5 +14,5 @@ mongoose.connect(DB_HOST)
   })
   .catch(error => {
     console.log(error.message)
-    process.exit(1)
+    process.exit(1);
   })
