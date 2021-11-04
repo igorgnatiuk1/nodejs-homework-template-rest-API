@@ -11,4 +11,4 @@ const current = async (req, res) => {
   })
 }
 
-module.exports = current;
+module.exports = current
