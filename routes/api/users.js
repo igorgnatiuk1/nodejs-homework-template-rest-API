@@ -1,11 +1,15 @@
-const express = require('express')
+const express = require('express');
 
-const { controllerWrapper, authenticate, upload } = require('../../middlewares')
+const { controllerWrapper, authenticate, upload } = require('../../middlewares');
 
-const { users: ctrl } = require('../../controllers')
+const { users: ctrl } = require('../../controllers');
 
-const router = express.Router()
+const router = express.Router();
 
-router.patch('/avatars', authenticate, upload.single('avatar'), controllerWrapper(ctrl.updateAvatar))
+router.get('/verify/:verificationToken', controllerWrapper(ctrl.verify));
 
-module.exports = router
+router.post('/verify', controllerWrapper(ctrl.reVerify));
+
+router.patch('/avatars', authenticate, upload.single('avatar'), controllerWrapper(ctrl.updateAvatar));
+
+module.exports = router;
